@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val etSearchWord = findViewById<EditText>(R.id.etSearchWord)
         val searchWord = URLEncoder.encode(etSearchWord.text.toString(),"UTF-8")
 
+        // "geo"で地図アプリを出す。地図アプリが複数ある場合は選べる
         val uriStr = "geo:0,0%q=${searchWord}"
 
         val uri = Uri.parse(uriStr)
